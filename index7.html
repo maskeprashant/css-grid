@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 900px;
+            margin:10px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+            grid-auto-rows: 5em 3em 3em 10em 3em;
+            grid-template-areas: 
+                'header header header'
+                'menu menu menu'
+                'box1 box2 sidebar'
+                'main main sidebar'
+                'footer footer footer';
+            grid-gap:1em;
+        }
+        .header{
+            grid-area: header;
+            background-color:cornflowerblue;
+        }
+        .menu{
+            grid-area:menu;
+            background-color: cornsilk;
+        }
+        .box1{
+            grid-area:box1;
+            background-color: crimson;
+        }
+        .box2{
+            grid-area:box2;
+            background-color: cyan;
+        }
+        .main{
+            grid-area:main;
+            background-color: darkblue;
+        }
+        .sidebar{
+            grid-area:sidebar;
+            background-color: darkcyan;
+        }
+        .footer{
+            grid-area:footer;
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">menus</div>
+        <div class="box1">box 1</div>
+        <div class="box2">box 2</div>
+        <div class="main">main</div>
+        <div class="sidebar">sidebar</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
